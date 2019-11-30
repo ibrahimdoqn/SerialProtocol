@@ -1,5 +1,4 @@
 #include "SerialProtocol.h"
-#include <stdint.h>
 #include "Variable.h"
 
 SerialProtocol protocol;

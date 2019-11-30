@@ -1,6 +1,6 @@
 #include "SerialProtocol.h"
 #include <SoftwareSerial.h>
-#include <stdint.h>
+
 
 SoftwareSerial yeniSeriPort(10, 11);
 

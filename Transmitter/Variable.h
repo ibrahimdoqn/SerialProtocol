@@ -1,9 +1,11 @@
 #ifndef VARIABLE_H
 #define VARIABLE_H
-
-#include <Arduino.h>
-#include <stdint.h>
 #include "SerialProtocol.h"
+#include <stdint.h>
+#include <stdbool.h>
+typedef uint8_t byte;
+typedef bool boolean;
+
 
 
 /**
@@ -14,7 +16,7 @@
 class Variable {
 public:
 
-//void (*CmdTransmitter)(byte* buf, byte cmdLength);
+void (*CmdTransmitter)(byte* buf, byte cmdLength);
 
 void int8tSend(int8_t variable, byte variableType );
 void uint8tSend(uint8_t variable, byte variableType );

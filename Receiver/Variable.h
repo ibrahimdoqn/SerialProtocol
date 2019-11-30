@@ -1,9 +1,11 @@
 #ifndef VARIABLE_H
 #define VARIABLE_H
-
-#include <Arduino.h>
-#include <stdint.h>
 #include "SerialProtocol.h"
+#include <stdint.h>
+#include <stdbool.h>
+typedef uint8_t byte;
+typedef bool boolean;
+
 
 
 /**

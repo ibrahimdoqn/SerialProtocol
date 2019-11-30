@@ -1,8 +1,9 @@
 #ifndef SERIALPROTOCOL_H
 #define SERIALPROTOCOL_H
 #include <stdint.h>
-
-#include <Arduino.h>
+#include <stdbool.h>
+typedef uint8_t byte;
+typedef bool boolean;
 
 /**
  * İbrahim DOĞAN
