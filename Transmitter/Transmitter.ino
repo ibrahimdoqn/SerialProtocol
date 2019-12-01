@@ -16,16 +16,14 @@ void Transmitter(byte* data, byte dataLenght){
 
 
 
-
+int sayi2 = -15780;
+char a = 'S';
+float sayi1 = -1.5780;
+double sayi3 = 1.256512;
 void loop()
 {
-      for(int32_t i = 0; i < 1998217; i++){
-        var.int32tSend(i,'a');
-        var.int32tSend(i+1,'b');
-        var.int32tSend(1998217-i,'c');
-      }
-
-      
-
-      
+  var.uint16Send(sayi2,'A');
+  var.uint8Send(a,'B');
+  var.floatSend(sayi1,'C');
+  var.doubleSend(sayi3,'D');
 }
