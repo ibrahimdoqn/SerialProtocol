@@ -103,29 +103,17 @@ void Variable::Receive(byte* cmd, byte cmdLength )
   }
   else if((byte)cmd[0] == 128){//Float
     fVar data;
-    data.veri[0] = cmd[2];
-    data.veri[1] = cmd[3];
-    data.veri[2] = cmd[4];
-    data.veri[3] = cmd[5];
-    float myInt1 = data.varFloat;
-    CmdReceivedPtrFloat(myInt1,cmd[1]);
+    for(byte i = 0; i < 4; i++) data.veri[i] = cmd[i+2];
+    CmdReceivedPtrFloat(data.varFloat,cmd[1]);
   }
   else if((byte)cmd[0] == 127){//Double
     dVar data;
-    data.veri[0] = cmd[2];
-    data.veri[1] = cmd[3];
-    data.veri[2] = cmd[4];
-    data.veri[3] = cmd[5];
-    double myInt1 = data.varDouble;
-    CmdReceivedPtrDouble(myInt1,cmd[1]);
+    for(byte i = 0; i < 4; i++) data.veri[i] = cmd[i+2];
+    CmdReceivedPtrDouble(data.varDouble,cmd[1]);
   }
   else if((byte)cmd[0] == 126){//Long
     lVar data;
-    data.veri[0] = cmd[2];
-    data.veri[1] = cmd[3];
-    data.veri[2] = cmd[4];
-    data.veri[3] = cmd[5];
-    long myInt1 = data.varLong;
-    CmdReceivedPtrLong(myInt1,cmd[1]);
+    for(byte i = 0; i < 4; i++) data.veri[i] = cmd[i+2];
+    CmdReceivedPtrLong(data.varLong,cmd[1]);
   }
 }
